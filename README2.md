@@ -49,6 +49,10 @@ git add README.md
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/AndBarajas/andbarajas.github.io.git
+
+(solve error "fatal: the remote end hung up unexpectedly")
+git config http.postBuffer 524288000
+
 git push -u origin main
 
 
