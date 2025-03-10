@@ -1,0 +1,679 @@
+:root {
+  /* Existing color variables */
+  --color-h3: #ffffff;
+  --color-h2: #dadada;
+  --color-h1: #cacaca;
+  --color-body: #aeaeae;
+  --color-secondary: #5466dc;
+  --color-third: #a2cdff;
+  --color-bg-all: #000000;
+  --color-bg1: #121212;
+  --color-bg2: #1e1e1e;
+  --color-shadow: #5d5d5d;
+  --test: #c5a90e;
+
+  /* New variables for section padding */
+  --section-padding-top: 40px; /* Adjust this value as needed */
+  --section-padding-bottom: 20px; /* Adjust this value as needed */
+
+  /* Updated font variables */
+  --font-family-primary: "Times New Roman", serif;
+  --font-family-secondary: "Times New Roman", serif;
+  --font-family-italic: "Times New Roman", serif;
+
+  --font-size-h1: 30px;
+  --font-size-h2: 22px;
+  --font-size-h3: 20px;
+  --font-size-body: 18px;
+  --font-size-small: 14px;
+
+  --line-height-h1: 1.1em;
+  --line-height-h2: 30px;
+  --line-height-h3: 1.9em;
+  --line-height-body: 24px;
+  --background-im: url(../images/Volcano_darkB.jpg);
+}
+
+.light-theme {
+  --color-h3: #080808;
+  --color-h2: #212121;
+  --color-h1: #3b3b3b;
+  --color-secondary: #0208c2; /* or change if needed */
+  --color-third: #07005c;
+  --color-body: #333333;
+  --color-bg-all: #ffffff;
+  --color-bg1: #e8e8e8;
+  --color-bg2: #dcdcdc;
+  --color-shadow: #cccccc;
+  --test: #c5a90e;
+
+  --background-im: url(../images/ISS_Kamchatka_MedC.jpg);
+}
+
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+body {
+  background: #0f0f0f;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  color: var(--color-body);
+}
+
+/* ------------------------------------------------------------------ */
+/* b. Navigation banner Styles
+/* ------------------------------------------------------------------ */
+
+/* Primary Navigation */
+
+#nav-wrap {
+  background: var(--color-bg-all);
+  font: var(--font-size-small)/1.5em var(--font-family-primary);
+  width: 100%;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  margin: 0 auto;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+#nav-wrap ul,
+#nav-wrap li,
+#nav-wrap a {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+
+.opaque {
+  background-color: #333;
+}
+
+#nav-wrap > a.mobile-btn {
+  display: none;
+}
+
+ul#nav {
+  min-height: 48px;
+  width: auto;
+  text-align: center;
+}
+
+ul#nav li {
+  position: relative;
+  list-style: none;
+  height: 48px;
+  display: inline-block;
+}
+
+ul#nav li a {
+  display: inline-block;
+  font-size: var(font-size-small);
+  padding: 8px 13px;
+  line-height: 32px;
+  text-decoration: none;
+  text-align: left;
+  color: var(--color-h3);
+  transition: color 0.2s ease-in-out;
+}
+
+/* ul#nav li a:active {
+  color: var(--color-h3);
+  background-color: transparent !important;
+} */
+
+ul#nav li.current a {
+  color: var(--color-secondary);
+  /* font-size: var(font-size-h1); */
+}
+
+.theme-toggle {
+  position: absolute;
+  right: 0px; /* Push it to the right */
+  top: 0px; /* Adjust vertical position */
+  background: var(--color-h3);
+  color: var(--color-bg-all);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.theme-toggle:hover {
+  background: var(--color-h1);
+}
+
+/* ------------------------------------------------------------------ */
+/* c. Header
+/* ------------------------------------------------------------------ */
+
+.header {
+  position: relative;
+  min-height: 500px;
+  /* width: 100%; */
+  display: flex;
+  height: 500px;
+  background: #161415 var(--background-im) no-repeat top center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 130px; /* Add padding to push content down */
+}
+
+.header .AB {
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  margin: 10px 0; /* Add spacing around the SVG */
+  fill: "white"; /* Use your theme color */
+  background-color: 'transparent'; /* Background color */
+  content: url(../images/AB.svg);
+}
+
+.dark-mode .AB {
+  content: url('/images/AB_White.svg'); /* Change in dark mode */
+}
+
+.header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.header .my-name {
+  margin: 0px 0; /* Reduced top margin */
+  position: relative;
+  color: var(--color-h3);
+  font-size: var(--font-size-h1);
+  /* font-weight: bold; */
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  text-align: center;
+  font-family: var(--font-family-primary);
+}
+
+.header .job-title {
+  margin: 0px 0; /* Reduced top margin */
+  margin-bottom: 0px; /* Reduced bottom margin */
+  position: relative;
+  color: var(--color-h2);
+  font-size: var(--font-size-h2);
+  font-weight: bold;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+  text-align: center;
+  font-family: var(--font-family-primary);
+}
+
+.header .horizontal-line {
+  width: 15%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  border: none;
+  margin: 10px 0;
+}
+
+.header .social {
+  margin: -30px 0; /* Reduced top margin */
+  padding: 0;
+  font-size: var(--font-size-h1);
+  /* text-shadow: 0px 1px 2px var(--color-shadow); */
+  text-align: center;
+}
+.header .social li {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 0;
+}
+
+.header .social li a {
+  color: var(--color-h3);
+}
+
+.header .social li a:hover {
+  color: var(--color-secondary);
+}
+
+/* ------------------------------------------------------------------ */
+/* d. About Section
+/* ------------------------------------------------------------------ */
+
+#about {
+  background: var(--color-bg1);
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  overflow: hidden;
+}
+
+#about .profile-pic {
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  object-fit: cover; /* Preserve aspect ratio and cover the container */
+  border-radius: 100%; /* Optional: Keep the circular shape */
+}
+
+#about a{
+  font-family: var(--font-family-primary);
+}
+
+#about a:visited {
+  color: var(--color-h3);
+}
+
+#about a:hover,
+#about a:focus {
+  color: var(--color-secondary);
+}
+
+#about h2 {
+  font: var(--font-size-h2)/var(--line-height-h2) var(--font-family-primary);
+  color: var(--color-h2);
+  margin-bottom: 12px;
+}
+
+#about p {
+  line-height: var(--line-height-body);
+  color: var(--color-h1);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+}
+
+#about .contact-details {
+  width: 41.66667%;
+}
+
+
+#about .main-col {
+  padding-right: 5%;
+}
+
+.download {
+  width: 58.33333%;
+  padding-top: 6px;
+}
+
+.download .button {
+  margin-top: 6px;
+  background: var(--color-h1);
+  color: var(--color-bg1);
+}
+
+.download .button:hover {
+  background: var(--bg-all);
+  color: var(--color-secondary);
+}
+
+/* download icon */
+.download .button i {
+  margin-right: 15px;
+  font-size: var(--font-size-h3);
+}
+
+/* ------------------------------------------------------------------ */
+/* e. Skills Section
+/* ------------------------------------------------------------------ */
+
+#skills {
+  background: var(--color-bg2);
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  overflow: hidden;
+}
+
+#skills a,
+#skills a:visited {
+  color: #5466dc;
+}
+
+#skills a:hover,
+#skills a:focus {
+  color: #313131;
+}
+
+#skills .sec_left {
+  font: var(--font-size-h3)/100px var(--font-family-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-h2);
+  text-align: center;
+  display: block;
+}
+
+#skills .sec_left span {
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: 6px;
+}
+
+#skills h3 {
+  font: var(--font-size-h2)/var(--line-height-h2) var(--font-family-primary);
+  color: var(--color-h3);
+}
+
+#skills .banner-col {
+  padding-top: 9px;
+}
+
+#skills .main-col {
+  padding-right: 10%;
+}
+
+.education,
+.work {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#skills .info {
+  font: var(--font-size-body)/var(--line-height-body) var(--font-family-italic);
+  color: #6e7881;
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+#skills .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#skills .date {
+  font: var(--font-size-small)/var(--line-height-body) var(--font-family-primary);
+  margin-top: 6px;
+}
+
+#skills h2 {
+  color: var(--color-h2);
+  font-family: var(--font-family-primary);
+}
+
+.skills .columns {
+  margin-left: 30px;
+}
+
+#skills .fab,
+#skills .fas,
+#skills .far {
+  color: var(--color-secondary);
+}
+
+#skills .pie-text {
+  color: var(--color-secondary);
+}
+
+#skills .pie-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#pie .text {
+  /* font-size: var(--font-size-body); */
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  fill: #ff9421;
+  font-family: var(--font-family-primary);
+}
+
+#pie .title {
+  font: var(--font-size-h2)/100px var(--font-family-primary);
+  text-transform: none;
+  letter-spacing: 1px;
+  text-align: center;
+  display: block;
+  fill: var(--color-h2);
+}
+
+#pie .percentage {
+  font-size: var(--font-size-h2);
+  fill: var(--color-h2);
+}
+
+/* #pie .circle-stroke {
+  stroke: green; /* Define your desired color here */
+} */
+
+/* Background circle (light grey) */
+#pie .circle-background {
+  stroke: #6762f5; 
+}
+
+/* Foreground circle (dynamic color, e.g., orange) */
+#pie .circle-foreground {
+  stroke: var(--color-third); 
+}
+/* ------------------------------------------------------------------ */
+/* f. Experience Section
+/* ------------------------------------------------------------------ */
+
+#exp {
+  background: var(--color-bg1);
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  overflow: hidden;
+}
+
+#exp a,
+#exp a:visited {
+  color: #5466dc;
+}
+
+#exp a:hover,
+#exp a:focus {
+  color: #313131;
+}
+
+#exp .sec_left {
+  font: var(--font-size-h3)/24px var(--font-family-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-h2);
+}
+
+#exp .sec_left span {
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: 6px;
+}
+
+#exp h3 {
+  font: var(--font-size-h2)/var(--line-height-h2) var(--font-family-primary);
+  color: var(--color-h3);
+}
+
+#exp .banner-col {
+  padding-top: 9px;
+}
+
+#exp .main-col {
+  padding-right: 10%;
+}
+
+.education,
+.work {
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#exp .info {
+  font: var(--font-size-body)/var(--line-height-body) var(--font-family-italic);
+  color: var(--color-h2);
+  margin-bottom: 18px;
+  margin-top: 9px;
+}
+
+#exp .info span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#exp .date {
+  font: var(--font-size-body)/var(--line-height-body) var(--font-family-primary);
+  margin-top: 6px;
+}
+
+#exp p {
+  color: var(--color-h1);
+  font-family: var(--font-family-primary);
+}
+
+.custom-list {
+  list-style-type: "➤ ";
+  color: var(--color-h1);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+}
+
+/* ------------------------------------------------------------------ */
+/* g. Works Section
+/* ------------------------------------------------------------------ */
+
+#works {
+  background: var(--color-bg2);
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  margin: 0px;
+}
+
+#works h2 {
+  font: var(--font-size-h2)/var(--line-height-h2) var(--font-family-primary);
+  color: var(--color-h2);
+  margin-bottom: 12px;
+}
+
+#works ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+#works ul li {
+  font: var(--font-size-h2)/var(--line-height-h2) var(--font-family-primary);
+  color: var(--color-h2);
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+#works ul li::before {
+  content: "➤";
+  color: var(--color-h2);
+  font-size: var(--font-size-h2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#works ul li a {
+  color: var(--color-h2);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#works ul li a:hover {
+  color: var(--color-secondary);
+}
+
+#works .subtitle {
+  font: var(--font-size-h3)/100px var(--font-family-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-h2);
+  text-align: center;
+  display: block;
+}
+
+#works .subtitle span {
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: 6px;
+}
+
+.works-container {
+  display: flex;
+  align-items: stretch; /* Stretch children to full height */
+  gap: 20px; /* Space between text and image */
+}
+
+.works-text {
+  flex: 4; /* Allow text to take up available space */
+}
+
+.works-image {
+  display: flex;
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
+  flex: 6; /* Allow image container to take up remaining space */
+}
+
+.works-image img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  width: 500px; /* Set the width of the image */
+}
+
+.works-image .cover-im {
+  content: url(../images/works/cover.jpg);
+}
+
+.dark-mode .cover-im {
+  content: url(../images/works/cover_inv.jpg);
+}
+
+/* ------------------------------------------------------------------ */
+/* g. Subpages format
+/* ------------------------------------------------------------------ */
+
+.subpage{
+  background: var(--color-bg1);
+  padding-top: var(--section-padding-top);
+  padding-bottom: var(--section-padding-bottom);
+  overflow: hidden;
+  padding-left: 40px; /* Add left padding */
+  padding-right: 40px; /* Add right padding */
+}
+
+
+.subpage-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; Adjust as needed */
+  padding: 40px 0; /* Add some padding if needed */
+}
+
+.entry_title {
+  font: var(--font-size-h2)/100px var(--font-family-primary);
+  font-weight: bold; /* Make it bold */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-h2);
+  text-align: center;
+  display: block;
+  /* font-size: 30px; */
+}
+
+.entry_title span {
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: 6px;
+}
+
+/* ------------------------------------------------------------------ */
+/* g. Extra
+/* ------------------------------------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
