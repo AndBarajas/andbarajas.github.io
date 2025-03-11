@@ -1,53 +1,53 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom"; // Import useLocation
 
 const Banner = ({ darkMode, toggleTheme }) => {
   const [currentSection, setCurrentSection] = useState("header");
   const location = useLocation(); // Get the current route
 
-  // Define navigation items
-  const navItems = [
+// Memorize navItems so it doesn't change on every render
+  const navItems = useMemo(() => [
     { id: "header", label: "Home" },
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
     { id: "exp", label: "Experience" },
     { id: "works", label: "Works" },
-  ];
-
-  // Handle scroll event (only on home page)
-  const handleScroll = () => {
-    if (location.pathname !== "/") return; // Disable scroll behavior on subpages
-  
-    const scrollPosition = window.scrollY;
-    const pageHeight = document.documentElement.scrollHeight;
-    const viewportHeight = window.innerHeight;
-  
-    // Check if we're near the bottom of the page
-    const isNearBottom = scrollPosition + viewportHeight >= pageHeight - 50;
-  
-    navItems.forEach(({ id }) => {
-      const sectionElement = document.getElementById(id);
-      if (sectionElement) {
-        if (
-          // Highlight the last section if we're near the bottom
-          (id === "works" && isNearBottom) ||
-          // Highlight other sections based on their position
-          (sectionElement.offsetTop <= scrollPosition + 50 &&
-            sectionElement.offsetTop + sectionElement.offsetHeight > scrollPosition + 50)
-        ) {
-          setCurrentSection(id);
-        }
-      } else {
-        console.warn(`Element with id "${id}" not found.`);
-      }
-    });
-  };
+  ], []);
 
   // Add and clean up scroll event listener
   useEffect(() => {
+
+    const handleScroll = () => {
+      if (location.pathname !== "/") return; // Disable scroll behavior on subpages
+    
+      const scrollPosition = window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+      const viewportHeight = window.innerHeight;
+    
+      // Check if we're near the bottom of the page
+      const isNearBottom = scrollPosition + viewportHeight >= pageHeight - 50;
+    
+      navItems.forEach(({ id }) => {
+        const sectionElement = document.getElementById(id);
+        if (sectionElement) {
+          if (
+            // Highlight the last section if we're near the bottom
+            (id === "works" && isNearBottom) ||
+            // Highlight other sections based on their position
+            (sectionElement.offsetTop <= scrollPosition + 50 &&
+              sectionElement.offsetTop + sectionElement.offsetHeight > scrollPosition + 50)
+          ) {
+            setCurrentSection(id);
+          }
+        } else {
+          console.warn(`Element with id "${id}" not found.`);
+        }
+      });
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]); // Re-run effect when route changes
+  }, [location.pathname, navItems]); // Add navItems
 
   // Handle navigation link clicks
   const handleNavClick = (id, event) => {
@@ -61,12 +61,12 @@ const Banner = ({ darkMode, toggleTheme }) => {
   return (
     <header id="home">
       <nav id="nav-wrap">
-        <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+        {/* <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
           Show navigation
         </a>
         <a className="mobile-btn" href="#" title="Hide navigation">
           Hide navigation
-        </a>
+        </a> */}
         <ul id="nav" className="nav">
           {navItems.map(({ id, label }) => (
             <li key={id} className={currentSection === id ? "current" : ""}>

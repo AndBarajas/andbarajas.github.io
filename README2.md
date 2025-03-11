@@ -15,6 +15,10 @@ run the webpage in browser
 npm start
 
 
+To create a production build (show all warnings)
+npm run build
+
+
 
 *******************************************
 
@@ -83,4 +87,13 @@ I run npm run deploy
             Branch: gh-pages
             Folder: / (root)
     Click on the "Save" button
+
+*******************************************
+After making changes, they can be updated on web as this:
+
+git add .
+git commit -m "Updated website with latest changes"
+git push origin main  # or 'master', depending on your branch name
+
+npm run deploy
 

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Digital = ({ darkMode }) => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <section
       id="digital"
@@ -13,16 +18,26 @@ const Digital = ({ darkMode }) => {
 
       <div className="download">
         {/* Direct acces to the paper on this{" "} */}
-        <a
-          href="" // Replace with your external URL
+        {/* <a
+          href="#" // Replace with your external URL
           target="_blank" // Open in a new tab
           rel="noopener noreferrer" // Security best practice
           className="button" // Add a class
         >
           <i className="fas fa-external-link-square-alt" />
+          In progress...
+        </a> */}
+
+        <button
+          onClick={() => alert("This link is not yet available.")}
+          className="button"
+          style={{ background: "none", border: "none", padding: 0, color: "inherit", cursor: "pointer" }}
+        >
+          <i className="fas fa-external-link-square-alt" />
           <i className="fas fa-external-link" />
           In progress...
-        </a>
+        </button>
+
       </div>
 
       <figure style={{ textAlign: "center" }}>

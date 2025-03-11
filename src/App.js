@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import resumeData from "./components/00_Data/resumeData";
 import Banner from "./components/05_Banner/Banner";
 import Header from "./components/10_Header/Header";

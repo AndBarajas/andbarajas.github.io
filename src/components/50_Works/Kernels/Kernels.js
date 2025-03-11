@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation back
+// import { Link } from "react-router-dom"; // Import Link for navigation back
 
 const Kernels = ({ darkMode }) => {
   return (
@@ -21,7 +21,6 @@ const Kernels = ({ darkMode }) => {
           className="button" // Add a class
         >
           <i className="fas fa-external-link-square-alt" />
-          <i className="fas fa-external-link" />
           Open access publication
         </a>
       </div>

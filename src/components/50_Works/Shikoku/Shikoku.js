@@ -21,7 +21,6 @@ const Shikoku = ({ darkMode }) => {
           className="button" // Add a class
         >
           <i className="fas fa-external-link-square-alt" />
-          <i className="fas fa-external-link" />
           Open access publication
         </a>
       </div>
