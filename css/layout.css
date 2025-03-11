@@ -262,19 +262,6 @@ ul#nav li.current a {
   border-radius: 100%; /* Optional: Keep the circular shape */
 }
 
-#about a{
-  font-family: var(--font-family-primary);
-}
-
-#about a:visited {
-  color: var(--color-h3);
-}
-
-#about a:hover,
-#about a:focus {
-  color: var(--color-secondary);
-}
-
 #about h2 {
   font: var(--font-size-h2)/var(--line-height-h2) var(--font-family-primary);
   color: var(--color-h2);
@@ -297,14 +284,26 @@ ul#nav li.current a {
   padding-right: 5%;
 }
 
+.columns.download {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 50px; /* Space between the buttons */
+}
+
 .download {
-  width: 58.33333%;
+  width: 80%;
   padding-top: 6px;
 }
 
 .download .button {
   margin-top: 6px;
   background: var(--color-h1);
+  color: var(--color-bg1);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+}
+
+.download .button:visited {
   color: var(--color-bg1);
 }
 
@@ -318,6 +317,9 @@ ul#nav li.current a {
   margin-right: 15px;
   font-size: var(--font-size-h3);
 }
+
+
+
 
 /* ------------------------------------------------------------------ */
 /* e. Skills Section
