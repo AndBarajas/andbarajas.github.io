@@ -9,7 +9,7 @@ export default class Header extends Component {
 
             {/* Add SVG here */}
             <img src="/images/AB_White.svg" className="AB" alt='int'/>
-            <h3 className="my-name">Andrés Barajas</h3>
+            <h3 className="my-name">Andrés BarajasAAA</h3>
             <h2 className="job-title">Data Scientist</h2>
             <hr className="horizontal-line" />
             <hr />
