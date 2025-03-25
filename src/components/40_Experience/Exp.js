@@ -14,7 +14,7 @@ export default class Experience extends Component {
           <div className="nine columns main-col">
             <div className="row item">
               <div className="twelve columns">
-                <h3>Post-doc</h3>
+                <h3>Researcher</h3>
                 <p className="info">
                   Signal Analysis <span>•</span>{" "}
                   <em className="date">March 2021 - December 2024</em>
