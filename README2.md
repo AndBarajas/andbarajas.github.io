@@ -91,6 +91,7 @@ I run npm run deploy
 *******************************************
 After making changes, they can be updated on web as this:
 
+cd Web
 git add .
 git commit -m "Updated website with latest changes"
 git push origin main  # or 'master', depending on your branch name
