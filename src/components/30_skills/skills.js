@@ -39,7 +39,7 @@ export default class Skills extends Component {
         icon: "fab fa-python",
         title: "Programming Languages",
         skills: [
-          "Python (pytorch, pandas, numpy, scipy, igraph)",
+          "Python (pytorch, pandas, numpy, scipy, igraph, matplotlib, scikit-learn, jupyter)",
           "C",
           "C++",
           "Fortran",

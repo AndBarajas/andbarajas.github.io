@@ -20,13 +20,11 @@ export default class Experience extends Component {
                   <em className="date">March 2021 - December 2024</em>
                 </p>
                 <ul className="custom-list">
-                  <li>Neural network design for seismic signal recovery</li>
-                  <li>
-                    Matrix transformation and decomposition methods for data
-                    analysis
-                  </li>
-                  <li>Fourier analysis of volcanic and tectonic signals</li>
-                  <li>Digital filter design for wave propagation simulation</li>
+                  <li>Design of generative encoder-decoder convolutional neural networks (CNN) for signal recovery</li>
+                  <li>Implementation of matrix transformation and decomposition methods for information extraction</li>
+                  <li>Temporal and spectral analysis (Fourier transform) of volcanic and tectonic signals</li>
+                  <li>Conception and design of digital filters for the generation of synthetic waveforms</li>
+                  <li>Development of techniques and codes to study long temporal data series</li>
                 </ul>
               </div>
             </div>
@@ -39,21 +37,11 @@ export default class Experience extends Component {
                   <em className="date">November 2017 - March 2021</em>
                 </p>
                 <ul className="custom-list">
-                  <li>
-                    Processing and interpretation of GPS, rain, and seismic data
-                  </li>
-                  <li>Physical modeling of Earth's wave propagation</li>
-                  <li>
-                    Physical modeling of water levels in underground reservoirs
-                  </li>
-                  <li>
-                    Inversion of seismic data to identify changes in the Earth's
-                    crust
-                  </li>
-                  <li>
-                    Measurement of seismic velocity changes related to water
-                    levels and seismicity
-                  </li>
+                  <li>Development of a physical model of wave propagation and mathematical estimation of sensitivity kernels through Monte Carlo simulations</li>
+                  <li>Construction of a physical model to estimate the water levels in underground aquifer reservoirs from rainfall data</li>
+                  <li>Processing and interpreting multi-year GPS, rain, and seismic data to identify correlations</li>
+                  <li>Inversion of seismic data to identify the depth in the Earth's crust changes from measurements obtained at the surface</li>
+                  <li>Measurement of the seismic velocity changes from ambient noise</li>
                 </ul>
               </div>
             </div>
