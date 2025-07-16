@@ -10,11 +10,12 @@ const Works = () => {
       <div className="works-container">
         <div className="works-text">
           <ul>
-            <li><Link to="/Digital"> Digital filters and convolutional neural network</Link></li>
-            <li><Link to="/Differential"> Differential phase analysis</Link></li>
-            <li><Link to="/shikoku"> Covariance matrix analysis for seismic and volcanic zones</Link></li>
-            <li><Link to="/kernels"> Sensitivity kernels and Monte Carlo simulation </Link></li>
-            <li><Link to="/aquifer"> Aquifer modeling and seismic velocity changes </Link></li>
+            <li><Link to="/Digital"> Digital filters and convolutional neural network (Paper)</Link></li>
+            <li><Link to="/Differential"> Differential phase analysis (Paper + software)</Link></li>
+            <li><Link to="/shikoku"> Covariance matrix analysis for seismic and volcanic zones (Paper)</Link></li>
+            <li><Link to="/kernels"> Sensitivity kernels and Monte Carlo simulation (Paper + software) </Link></li>
+            <li><Link to="/aquifer"> Aquifer modeling and seismic velocity changes (Paper) </Link></li>
+            <li><Link to="/thesis"> Imaging for scattering properties of the crust(Thesis) </Link></li>
           </ul>
         </div>
         <div className="works-image">

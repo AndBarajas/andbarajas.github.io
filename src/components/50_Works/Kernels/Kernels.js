@@ -25,6 +25,19 @@ const Kernels = ({ darkMode }) => {
         </a>
       </div>
 
+      <div className="download">
+        {/* Direct acces to the paper on this{" "} */}
+        <a
+          href="https://zenodo.org/records/8276578" // Replace with your external URL
+          target="_blank" // Open in a new tab
+          rel="noopener noreferrer" // Security best practice
+          className="button" // Add a class
+        >
+          <i className="fas fa-external-link-square-alt" />
+          Software
+        </a>
+      </div>
+
       <figure style={{ textAlign: "center" }}>
         <img
           src="/images/works/Kernels_1.png"

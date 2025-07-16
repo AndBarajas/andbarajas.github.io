@@ -24,6 +24,18 @@ const Differential = ({ darkMode }) => {
           Open access publication
         </a>
       </div>
+      <div className="download">
+        {/* Direct acces to the paper on this{" "} */}
+        <a
+          href="https://github.com/AndBarajas/Differential-Phase" // Replace with your external URL
+          target="_blank" // Open in a new tab
+          rel="noopener noreferrer" // Security best practice
+          className="button" // Add a class
+        >
+          <i className="fas fa-external-l`ink-square-alt" />
+          Software
+        </a>
+      </div>
 
       <figure style={{ textAlign: "center" }}>
         <img

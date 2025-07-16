@@ -10,6 +10,7 @@ import Portfolio from "./components/50_Works/Works";
 import Aquifer from "./components/50_Works/Aquifer/Aquifer";
 import Kernels from "./components/50_Works/Kernels/Kernels";
 import Shikoku from "./components/50_Works/Shikoku/Shikoku";
+import Thesis from "./components/50_Works/Thesis/Thesis";
 import Differential from "./components/50_Works/Differential/Differential";
 import Digital from "./components/50_Works/Digital/Digital";
 
@@ -38,6 +39,7 @@ const App = ({ darkMode, toggleTheme }) => {
         <Route path="/shikoku" element={<Shikoku darkMode={darkMode} />} />
         <Route path="/kernels" element={<Kernels darkMode={darkMode} />} />
         <Route path="/aquifer" element={<Aquifer darkMode={darkMode} />} />
+        <Route path="/thesis" element={<Thesis darkMode={darkMode} />} />
       </Routes>
     </div>
   );
