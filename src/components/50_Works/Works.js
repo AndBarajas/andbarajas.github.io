@@ -15,7 +15,7 @@ const Works = () => {
             <li><Link to="/shikoku"> Covariance matrix analysis for seismic and volcanic zones (Paper)</Link></li>
             <li><Link to="/kernels"> Sensitivity kernels and Monte Carlo simulation (Paper + software) </Link></li>
             <li><Link to="/aquifer"> Aquifer modeling and seismic velocity changes (Paper) </Link></li>
-            <li><Link to="/thesis"> Imaging for scattering properties of the crust(Thesis) </Link></li>
+            <li><Link to="/thesis"> Imaging for scattering properties of the crust (Thesis) </Link></li>
           </ul>
         </div>
         <div className="works-image">

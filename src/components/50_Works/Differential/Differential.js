@@ -32,7 +32,7 @@ const Differential = ({ darkMode }) => {
           rel="noopener noreferrer" // Security best practice
           className="button" // Add a class
         >
-          <i className="fas fa-external-l`ink-square-alt" />
+          <i className="fas fa-external-link-square-alt" />
           Software
         </a>
       </div>

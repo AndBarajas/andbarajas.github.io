@@ -9,7 +9,7 @@ const Thesis = ({ darkMode }) => {
     >
       <div className="subpage-image"></div>
       <div className="entry_title">
-        <span>Covariance matrix analisys for seismic and volcanic zones</span>
+        <span>Imaging for scattering properties of the crust (Thesis)</span>
       </div>
 
       <div className="download">

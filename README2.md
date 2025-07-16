@@ -92,7 +92,7 @@ I run npm run deploy
 After making changes, they can be updated on web as this:
 
 cd Web
-git add .
+npm run deploy
 git commit -m "DESCRIPTION"
 git push origin main  # or 'master', depending on your branch name
 
